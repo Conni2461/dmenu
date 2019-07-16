@@ -22,3 +22,7 @@ Afterwards enter the following command to build and install dmenu
 ## Running dmenu
 
 See the man page for details.
+
+## Patches
+
+- https://tools.suckless.org/dmenu/patches/password/dmenu-password-4.7.diff
