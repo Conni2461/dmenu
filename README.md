@@ -26,3 +26,4 @@ See the man page for details.
 ## Patches
 
 - https://tools.suckless.org/dmenu/patches/password/dmenu-password-4.7.diff
+- https://tools.suckless.org/dmenu/patches/highlight/dmenu-highlight-4.9.diff
