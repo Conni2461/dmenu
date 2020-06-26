@@ -796,8 +796,17 @@ main(int argc, char *argv[])
 			mon = atoi(argv[++i]);
 		else if (!strcmp(argv[i], "-p"))   /* adds prompt to left of input field */
 			prompt = argv[++i];
-		else if (!strcmp(argv[i], "-fn"))  /* font or font set */
-			fonts[0] = argv[++i];
+		else if (!strcmp(argv[i], "-fn")) {  /* font or font set */
+			const char* full_argv = argv[++i];
+			char tmp_str_arr[1000];
+			strncpy(tmp_str_arr, full_argv, sizeof(tmp_str_arr));
+			int k = 0;
+			char * word = strtok(tmp_str_arr, " ");
+			do {
+				fonts[k] = word;
+				k++;
+			} while((word = strtok(0, " ")));
+		}
 		else if(!strcmp(argv[i], "-h")) { /* minimum height of one menu line */
 			lineheight = atoi(argv[++i]);
 			lineheight = MAX(lineheight,8); /* reasonable default in case of value too small/negative */
